@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学学習サイト</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .paid-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>数学学習サイト</h1>
+
+    <!-- 無料コンテンツ -->
+    <div class="free-content">
+        <h2>無料の内容</h2>
+        <p>これは誰でもアクセスできる無料のコンテンツです。</p>
+        <p>例えば、次の数式はインライン表示されます: \( E = mc^2 \)</p>
+        <p>次の数式はディスプレイ表示されます:</p>
+        <p>\[
+        \int_{a}^{b} f(x) \, dx = F(b) - F(a)
+        \]</p>
+    </div>
+
+    <!-- 有料コンテンツ -->
+    <div class="paid-content" id="paid-content">
+        <h2>有料の内容</h2>
+        <p>これは課金ユーザーだけがアクセスできる有料コンテンツです。</p>
+    </div>
+
+    <script>
+        // ユーザーのサブスクリプション状態を仮定する
+        function getUserSubscriptionStatus() {
+            // 実際にはサーバーからのデータを取得する
+            return false; // 課金ユーザーでないと仮定
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var isPaidUser = getUserSubscriptionStatus();
+            if (isPaidUser) {
+                document.getElementById("paid-content").style.display = "block";
+            } else {
+                document.getElementById("paid-content").style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
