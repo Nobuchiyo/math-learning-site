@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>ベクトルと関数の直交性</title>
+</head>
+<body>
+    <h2>ベクトルの直交性と関数の直交性の具体例</h2>
+
+    <h3>1. ベクトルの直交性の具体例</h3>
+    <p>
+        ここでは、3次元ベクトル \( \mathbf{a} = (1, 0, 0) \) と \( \mathbf{b} = (0, 1, 0) \) が直交していることを確認します。
+    </p>
+    <p>
+        2つのベクトルの内積は次のように計算されます：
+    </p>
+    <p>
+        \[
+        \mathbf{a} \cdot \mathbf{b} = 1 \times 0 + 0 \times 1 + 0 \times 0
+        \]
+    </p>
+    <p>
+        計算すると：
+    </p>
+    <p>
+        \[
+        \mathbf{a} \cdot \mathbf{b} = 0
+        \]
+    </p>
+    <p>
+        この結果、内積がゼロであるため、ベクトル \( \mathbf{a} \) と \( \mathbf{b} \) は直交していることが確認できます。
+    </p>
+
+    <h3>2. 三角関数の直交性の具体例</h3>
+    <p>
+        次に、三角関数 \( \sin(2x) \) と \( \sin(3x) \) が区間 \( [0, \pi] \) で直交していることを確認します。
+    </p>
+    <p>
+        三角関数の積分内積を次のように計算します：
+    </p>
+    <p>
+        \[
+        \int_0^\pi \sin(2x) \sin(3x) \, dx
+        \]
+    </p>
+    <p>
+        まず、三角関数の積の公式を用いて積分を簡単にします：
+    </p>
+    <p>
+        \[
+        \sin(2x) \sin(3x) = \frac{1}{2} \left[ \cos(x) - \cos(5x) \right]
+        \]
+    </p>
+    <p>
+        したがって、積分は次のように書き直されます：
+    </p>
+    <p>
+        \[
+        \int_0^\pi \sin(2x) \sin(3x) \, dx = \frac{1}{2} \int_0^\pi \left[ \cos(x) - \cos(5x) \right] dx
+        \]
+    </p>
+    <p>
+        それぞれの項を積分します：
+    </p>
+    <p>
+        \[
+        \int_0^\pi \cos(x) \, dx = \sin(x) \Big|_0^\pi = \sin(\pi) - \sin(0) = 0
+        \]
+    </p>
+    <p>
+        \[
+        \int_0^\pi \cos(5x) \, dx = \frac{1}{5} \sin(5x) \Big|_0^\pi = \frac{1}{5} \left[ \sin(5\pi) - \sin(0) \right] = 0
+        \]
+    </p>
+    <p>
+        したがって、積分結果は：
+    </p>
+    <p>
+        \[
+        \int_0^\pi \sin(2x) \sin(3x) \, dx = \frac{1}{2} (0 - 0) = 0
+        \]
+    </p>
+    <p>
+        この結果から、三角関数 \( \sin(2x) \) と \( \sin(3x) \) は区間 \( [0, \pi] \) で直交していることが分かります。
+    </p>
+
+    <h3>3. ベクトルと関数の直交性の共通点</h3>
+    <p>
+        ベクトルの直交性と関数の直交性は、どちらも「内積」という共通の概念に基づいています。ベクトルの直交性は要素の積の和（内積）を使って確認し、関数の直交性は積分内積を使って確認します。いずれの場合も、内積がゼロであれば直交していることを示します。
+    </p>
+</body>
+</html>
