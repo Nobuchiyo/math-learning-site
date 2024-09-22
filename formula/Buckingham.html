@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バッキンガムのパイ定理</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <h1>バッキンガムのパイ定理の例</h1>
+
+  <h2>バッキンガムのパイ定理の簡単な解説</h2>
+  <p>
+    バッキンガムのパイ定理は、物理量を使って無次元のパラメータを作り出す方法です。
+    物理量は「長さ」や「質量」、「時間」などの次元を持っていますが、
+    この定理では、それらの次元を使わない無次元数を作ります。これにより、
+    物理現象をシンプルな形で表現でき、同じ現象をさまざまな条件下で比較することができます。
+  </p>
+  <p>
+    例えば、流体中で物体が沈む速度に影響を与える要素には、物体の大きさ、流体の密度や粘度などがありますが、
+    これらを次元を持たない形に変換すると、ある一つの数値（無次元数）でその現象を表現することができます。
+  </p>
+
+  <h2>物理量</h2>
+  <ul>
+    <li>速度 \( v \) [m/s]</li>
+    <li>球の直径 \( d \) [m]</li>
+    <li>流体の密度 \( \rho \) [kg/m^3]</li>
+    <li>流体の粘度 \( \mu \) [Pa·s または kg/m·s]</li>
+  </ul>
+
+  <h2>次元解析</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>物理量</th>
+        <th>M</th>
+        <th>L</th>
+        <th>T</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>\( v \)</td>
+        <td>0</td>
+        <td>1</td>
+        <td>-1</td>
+      </tr>
+      <tr>
+        <td>\( d \)</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>\( \rho \)</td>
+        <td>1</td>
+        <td>-3</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>\( \mu \)</td>
+        <td>1</td>
+        <td>-1</td>
+        <td>-1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>無次元数の導出</h2>
+  <p>次元解析に基づいて、無次元数（レイノルズ数）は次の式で表される：</p>
+
+  <p>
+    \[
+    \pi_1 = \frac{\rho v d}{\mu}
+    \]
+  </p>
+
+  <h2>最終関係式</h2>
+  <p>無次元数 \(\pi_1\) は、レイノルズ数として次のように表される：</p>
+
+  <p>
+    \[
+    \text{Re} = \frac{\rho v d}{\mu}
+    \]
+  </p>
+</body>
+</html>
