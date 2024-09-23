@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固有値問題の解法</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>固有値問題の解法</h1>
+    <p>次の微分方程式</p>
+    <div>
+        $$ \frac{d}{dx} f(x) = \lambda f(x) $$
+    </div>
+    <p>を解きます。ここで、\( f(x) \neq 0 \) と仮定します。</p>
+
+    <p>まず、両辺を \( f(x) \) で割ります。</p>
+    <div>
+        $$ \frac{1}{f(x)} \frac{d}{dx} f(x) = \lambda $$
+    </div>
+
+    <p>この式の両辺を \( x \) に関して積分します。</p>
+    <div>
+        $$ \int \frac{1}{f(x)} \frac{d}{dx} f(x) \, dx = \int \lambda \, dx $$
+    </div>
+
+    <p>左辺は \( \log |f(x)| \)、右辺は \( \lambda x + b \) （積分定数 \( b \)）となります。</p>
+    <div>
+        $$ \log |f(x)| = \lambda x + b $$
+    </div>
+
+    <p>次に、両辺の指数関数を取ります。</p>
+    <div>
+        $$ |f(x)| = e^{\lambda x + b} = e^b e^{\lambda x} $$
+    </div>
+
+    <p>ここで、\( e^b \) は定数 \( c \) とおくと、</p>
+    <div>
+        $$ |f(x)| = c e^{\lambda x} $$
+    </div>
+
+    <p>最後に、\( f(x) \) の符号を考慮して、一般解は次のようになります。</p>
+    <div>
+        $$ f(x) = \pm c e^{\lambda x} $$
+    </div>
+
+    <p>任意の定数 \( \pm c \) を \( c \) としてまとめることで、最終的に</p>
+    <div>
+        $$ f(x) = c e^{\lambda x} $$
+    </div>
+
+    <p>が得られます。</p>
+</body>
+</html>
