@@ -37,5 +37,22 @@
     \forall x, y \in \mathbb{R}, \, x &lt; y \implies \exists z \in \mathbb{R}, \, x &lt; z &lt; y
   \]</p>
 
+
+  <h1>コーシーの収束判定条件</h1>
+  
+  <h2>コーシー列（Cauchy列）</h2>
+  <p>実数列 \(\{a_n\}\) が <strong>コーシー列</strong> であるとは、任意の正の数 \(\epsilon &gt; 0\) に対して、自然数 \(N\) が存在し、全ての \(n, m \geq N\) について次が成り立つことです：</p>
+  <p>\[
+    |a_n - a_m| &lt; \epsilon
+  \]</p>
+
+  <h2>コーシーの収束判定条件</h2>
+  <p>数列 \(\{a_n\}\) が収束するための必要十分条件は、それがコーシー列であることです。すなわち：</p>
+  <p>\[
+    \{a_n\} \text{ が収束する} \iff \forall \epsilon &gt; 0, \exists N \in \mathbb{N}, \forall n, m \geq N, \, |a_n - a_m| &lt; \epsilon
+  \]</p>
+
+  <p>実数の完備性により、実数の範囲ではコーシー列は必ず極限を持ちます。</p>
+  
 </body>
 </html>
