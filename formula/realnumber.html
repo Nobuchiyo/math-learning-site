@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>実数の性質</title>
+</head>
+<body>
+  <h1>実数の性質</h1>
+  
+  <h2>1. 順序性</h2>
+  <p>実数には大小関係があり、任意の実数 \(x\) と \(y\) に対して、次のいずれかが成り立ちます。</p>
+  <ul>
+    <li>\(x &lt; y\)</li>
+    <li>\(x = y\)</li>
+    <li>\(x &gt; y\)</li>
+  </ul>
+
+  <h2>2. 完備性</h2>
+  <p>実数は完備であり、これは <strong>上限の公理</strong> によって説明されます。</p>
+  <p>実数の部分集合 \(S\) が上に有界であれば、\(S\) の上限（最小の上界）が存在します：</p>
+  <p>\[
+    \exists M \in \mathbb{R}, \, \forall x \in S, \, x \leq M \implies \sup(S) = M
+  \]</p>
+
+  <h2>3. 四則演算の閉包性</h2>
+  <p>実数は加法、減法、乗法、除法について閉じています。すなわち、</p>
+  <p>\[
+    a + b \in \mathbb{R}, \quad a - b \in \mathbb{R}, \quad a \cdot b \in \mathbb{R}, \quad \frac{a}{b} \in \mathbb{R} \, (b \neq 0)
+  \]</p>
+
+  <h2>4. 連続性</h2>
+  <p>実数は連続しており、任意の実数 \(x\) と \(y\) の間には常に他の実数が存在します：</p>
+  <p>\[
+    \forall x, y \in \mathbb{R}, \, x &lt; y \implies \exists z \in \mathbb{R}, \, x &lt; z &lt; y
+  \]</p>
+
+</body>
+</html>
