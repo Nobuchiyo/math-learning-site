@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h2>イプシロン-デルタ論法の説明</h2>
+    <p>イプシロン-デルタ論法（ε-δ論法）は、微分積分学において関数の極限を厳密に定義するための方法です。</p>
+
+    <h3>イプシロン-デルタ論法の定義</h3>
+    <p>ある関数 <span>\( f(x) \)</span> について、</p>
+    <p><span>\(\lim_{x \to a} f(x) = L \)</span> であることは、次の条件を満たす場合に成り立ちます。</p>
+
+    <p><strong>任意の正の実数 ε に対して、ある正の実数 δ が存在して、</strong></p>
+    <p><span>\( 0 < |x - a| < \delta \)</span> のとき、</p>
+    <p><span>\( |f(x) - L| < \epsilon \)</span> が成り立つ。</p>
+
+    <h3>具体例</h3>
+    <p>例えば、関数 <span>\( f(x) = 2x \)</span> について、</p>
+    <p><span>\(\lim_{x \to 1} 2x = 2 \)</span> を示します。</p>
+    <p>この場合、次のように書けます。</p>
+    <p><span>\( |f(x) - 2| = |2x - 2| = 2|x - 1| \)</span></p>
+    <p>したがって、<span>\( |f(x) - 2| < \epsilon \)</span> となるためには、</p>
+    <p><span>\( 2|x - 1| < \epsilon \)</span> が成り立つ必要があります。これを解くと、</p>
+    <p><span>\( |x - 1| < \frac{\epsilon}{2} \)</span> となります。すなわち、<span>\(\delta = \frac{\epsilon}{2}\)</span> とすればよいことがわかります。</p>
+</body>
+</html>
