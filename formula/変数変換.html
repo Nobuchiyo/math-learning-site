@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>変数変換の解説</title>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+</head>
+<body>
+  <h1>変数変換の解説</h1>
+  
+  <h2>1. 三角関数の積分における変数変換</h2>
+  <p>次の積分を考えます。</p>
+  <p>$$ I = \int_0^1 \frac{dx}{\sqrt{1 - x^2}} $$</p>
+  <p>ここで、<em>x</em>を三角関数で変数変換します。<em>x = \sin \theta</em>と置き、微分すると、</p>
+  <p>$$ dx = \cos \theta \, d\theta $$</p>
+  <p>積分範囲も変換され、<em>0 \leq x \leq 1</em>は<em>0 \leq \theta \leq \frac{\pi}{2}</em>となります。</p>
+  <p>変数を置き換えると、次のようになります。</p>
+  <p>$$ I = \int_0^{\frac{\pi}{2}} \frac{\cos \theta \, d\theta}{\sqrt{1 - \sin^2 \theta}} = \int_0^{\frac{\pi}{2}} \frac{\cos \theta \, d\theta}{\cos \theta} = \int_0^{\frac{\pi}{2}} d\theta $$</p>
+  <p>この結果、</p>
+  <p>$$ I = \left[ \theta \right]_0^{\frac{\pi}{2}} = \frac{\pi}{2} $$</p>
+  <p>となります。</p>
+  
+  <h2>2. 極限における変数変換の応用</h2>
+  <p>次の極限を考えます。</p>
+  <p>$$ \lim_{x \to 0} \frac{\sin x}{x} $$</p>
+  <p>変数変換<em>t = \frac{1}{x}</em>を用いて、極限を書き換えると次のようになります。</p>
+  <p>$$ \lim_{x \to 0} \frac{\sin x}{x} = \lim_{t \to \infty} t \cdot \sin \left( \frac{1}{t} \right) $$</p>
+  <p>小さい値に対する近似を行うと、</p>
+  <p>$$ \sin \left( \frac{1}{t} \right) \approx \frac{1}{t} $$</p>
+  <p>となり、</p>
+  <p>$$ \lim_{t \to \infty} t \cdot \frac{1}{t} = 1 $$</p>
+  <p>したがって、極限の結果は \( 1 \)となります。</p>
+
+</body>
+</html>
