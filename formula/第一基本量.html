@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第一基本量</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" async 
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <h1>第一基本量</h1>
+  <p>曲面の第一基本量は次の二次形式で表されます：</p>
+  <p>
+    $$ ds^2 = E \, du^2 + 2F \, du \, dv + G \, dv^2 $$
+  </p>
+  <p>ここで、$E, F, G$ は次のように定義されます：</p>
+  <ul>
+    <li>$$ E = \mathbf{r}_u \cdot \mathbf{r}_u $$</li>
+    <li>$$ F = \mathbf{r}_u \cdot \mathbf{r}_v $$</li>
+    <li>$$ G = \mathbf{r}_v \cdot \mathbf{r}_v $$</li>
+  </ul>
+  <p>曲面上の2つのベクトルの間の角度 $\theta$ は次の式で計算されます：</p>
+  <p>
+    $$ \cos \theta = \frac{E \, du_1 \, du_2 + F \, (du_1 \, dv_2 + du_2 \, dv_1) + G \, dv_1 \, dv_2}{\sqrt{E \, du_1^2 + 2F \, du_1 \, dv_1 + G \, dv_1^2} \cdot \sqrt{E \, du_2^2 + 2F \, du_2 \, dv_2 + G \, dv_2^2}} $$
+  </p>
+</body>
+</html>
