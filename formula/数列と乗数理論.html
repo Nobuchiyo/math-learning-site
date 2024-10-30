@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数列と乗数理論</title>
+    <style>
+        .answer { display: none; }
+        .toggle-button { margin-top: 10px; display: inline-block; cursor: pointer; color: blue; text-decoration: underline; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        function toggleAnswer(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>数列と乗数理論</h1>
+
+    <h2>等差数列の和を求める練習問題</h2>
+    <p>次の等差数列の第1項から第5項までの和を求めてください：</p>
+    <ol>
+        <li>初項 \( a = 4 \)、公差 \( d = 2 \)</li>
+        <li>初項 \( a = 7 \)、公差 \( d = 3 \)</li>
+    </ol>
+
+    <div class="toggle-button" onclick="toggleAnswer('answerSum')">解答を表示/非表示</div>
+    <div id="answerSum" class="answer">
+        <ol>
+            <li>初項 \( a = 4 \)、公差 \( d = 2 \) の第1項から第5項までの和は
+            \[
+            S_5 = \frac{5}{2} \cdot (4 + (4 + 8)) = \frac{5}{2} \cdot 12 = 30
+            \]
+            </li>
+            <li>初項 \( a = 7 \)、公差 \( d = 3 \) の第1項から第5項までの和は
+            \[
+            S_5 = \frac{5}{2} \cdot (7 + (7 + 12)) = \frac{5}{2} \cdot 19 = 47.5
+            \]
+            しかし、整数値として最も近い場合、答えは 48 です。
+            </li>
+        </ol>
+    </div>  
+
+    <h2>等比級数と乗数理論</h2>
+    <p>経済学における乗数理論では、初期の支出が経済全体に与える影響を、無限等比級数の形で表すことができます。例えば、ある初期支出が増加すると、その効果が何度も繰り返されるため、全体として大きな影響を与えます。この効果は次のように無限等比級数を使って表されます。</p>
+    <p>乗数効果を考えるとき、初期支出を \( a \) とし、経済への波及効果を \( r \) としたとき、全体の効果（乗数）は次の無限等比級数で表されます：</p>
+    <p>
+    \[
+    S = a + ar + ar^2 + ar^3 + \cdots = \frac{a}{1 - r} \quad (0 < r < 1)
+    \]
+    </p>
+    <p>この公式を使うことで、ある経済刺激の総効果を計算できます。</p>
+
+    <h2>練習問題：乗数理論と無限等比級数</h2>
+    <p>ある経済に初期支出として \( a = 100 \) が投入され、公比（波及効果） \( r = 0.8 \) だとします。このとき、全体の経済効果（総和）を無限等比級数の公式を使って求めてください。</p>
+
+    <div class="toggle-button" onclick="toggleAnswer('answerMultiplier')">解答を表示/非表示</div>
+    <div id="answerMultiplier" class="answer">
+        <p>無限等比級数の公式を使うと、総効果は次のように計算されます：</p>
+        <p>
+        \[
+        S = \frac{100}{1 - 0.8} = \frac{100}{0.2} = 500
+        \]
+        </p>
+        <p>したがって、この経済刺激により、最終的な経済効果は **500** となります。</p>
+    </div>
+
+    <h2>追加問題：有限等比級数の和</h2>
+    <p>次に、初期支出が繰り返し経済に与える効果を考え、5段階での総効果を有限等比級数の公式を使って求めてみましょう。</p>
+    <p>初期支出 \( a = 100 \)、波及効果 \( r = 0.8 \) として、**5段階の総効果**を計算してください。</p>
+
+    <div class="toggle-button" onclick="toggleAnswer('answerFiniteGeometric')">解答を表示/非表示</div>
+    <div id="answerFiniteGeometric" class="answer">
+        <p>有限等比級数の公式は次のように表されます：</p>
+        <p>
+        \[
+        S_n = a \cdot \frac{1 - r^n}{1 - r}
+        \]
+        </p>
+        <p>この場合、初項 \( a = 100 \)、公比 \( r = 0.8 \)、項数 \( n = 5 \) なので：</p>
+        <p>
+        \[
+        S_5 = 100 \cdot \frac{1 - 0.8^5}{1 - 0.8} = 100 \cdot \frac{1 - 0.32768}{0.2} = 100 \cdot \frac{0.67232}{0.2} = 336.16
+        \]
+        </p>
+        <p>したがって、5段階での総効果は **336.16** となります。</p>
+    </div>
+
+</body>
+</html>
